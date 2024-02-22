@@ -39,7 +39,7 @@ def get_rq_name_values(file):
             }]
         }
 
-file = 'mc_10_ru.bjson' # Ccurrently any font File in .bjson can go here.
-print(json.dumps(get_rq_name_values(file), indent=4))
+file = 'mc_10_ru.bjson' # Currently any font File in .bjson can go here.
+print(json.dumps(get_rq_name_values(file), indent=4)) # Debug Information (may remove @ later date)
 with open(f'{file.replace('.bjson','_Converted2json.json')}', 'w') as f0:
     json_data = json.dump(get_rq_name_values(file), f0, indent=4)
