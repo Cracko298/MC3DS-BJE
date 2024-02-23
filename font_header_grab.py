@@ -20,7 +20,6 @@ def configuration(file):
 
     return [output_format, mode, fileType, fileIn]
 
-
 def get_rq_name_values(file):
     # Gets the first vars and values for file to work properly.
     with open(file,'rb+') as of:
@@ -71,10 +70,6 @@ if ptr == 1:
 
 file = 'mc_10_ru.bjson' # Currently any font File in .bjson can go here.
 c0, c1, c2, c3 = configuration(config)
-
-
-
 print(json.dumps(get_rq_name_values(file), indent=4)) # Debug Information (may remove @ later date)
 with open(f'{file.replace('.bjson','_Converted2json.json')}', 'w') as f0:
     json_data = json.dump(get_rq_name_values(file), f0, indent=4)
-
